@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contact</title>
+		<link rel="stylesheet" type="text/css" href="./contact.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	</head>
+	<body>
+		<nav id="desktopNavBar">
+			<div class="desktopNavLinks">
+				<a href="services.html">Services</a>
+				<a href="contact.html" class="active">Contact</a>
+			</div>
+			<div class="desktopNavLogo">
+				<a href="index.html">
+					<img src="./Images/logowebp.webp" alt="logo image">
+				</a>
+			</div>
+			<div class="desktopNavButtons">
+				<div class="desktopNavSocialMedia">		
+					<a href="https://www.instagram.com/">
+						<svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11C3 7.22876 3 5.34315 4.17157 4.17157C5.34315 3 7.22876 3 11 3H13C16.7712 3 18.6569 3 19.8284 4.17157C21 5.34315 21 7.22876 21 11V13C21 16.7712 21 18.6569 19.8284 19.8284C18.6569 21 16.7712 21 13 21H11C7.22876 21 5.34315 21 4.17157 19.8284C3 18.6569 3 16.7712 3 13V11Z" stroke="white" stroke-width="2"/><circle cx="16.5" cy="7.5" r="1.5" fill="white"/><circle cx="12" cy="12" r="3" stroke="white" stroke-width="2"/></svg>
+					</a>
+					<a href="https://www.facebook.com/">
+						<svg viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-385.000000, -7399.000000)" fill="white"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"></path></g></g></g></svg>
+					</a>
+					<a href="https://x.com/">
+						<svg viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-60.000000, -7521.000000)" fill="white"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"></path></g></g></g></svg>
+					</a>
+				</div>
+				<button>Book Now</button>
+			</div>
+		    <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+      			<svg width="50" height="50" viewBox="0 0 100 100">
+        		<path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+				<path class="line line2" d="M 20,50 H 80" />
+        		<path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+				</svg>
+			</button>
+		</nav>
+		<div class="mobileNav">
+			<div class="mobileNavLinks">
+				<a href="services.html">Services</a>
+				<a href="contact.html" class="active">Contact</a>
+			</div>
+			<div class="mobileNavSocialMedia">		
+				<a href="https://www.instagram.com/">
+					<svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11C3 7.22876 3 5.34315 4.17157 4.17157C5.34315 3 7.22876 3 11 3H13C16.7712 3 18.6569 3 19.8284 4.17157C21 5.34315 21 7.22876 21 11V13C21 16.7712 21 18.6569 19.8284 19.8284C18.6569 21 16.7712 21 13 21H11C7.22876 21 5.34315 21 4.17157 19.8284C3 18.6569 3 16.7712 3 13V11Z" stroke="white" stroke-width="2"/><circle cx="16.5" cy="7.5" r="1.5" fill="white"/><circle cx="12" cy="12" r="3" stroke="white" stroke-width="2"/></svg>
+				</a>
+				<a href="https://www.facebook.com/">
+					<svg viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-385.000000, -7399.000000)" fill="white"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"></path></g></g></g></svg>
+				</a>
+				<a href="https://x.com/">
+					<svg viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-60.000000, -7521.000000)" fill="white"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"></path></g></g></g></svg>
+				</a>
+			</div>
+			<button class="mobileNavCta">Book Now</button>
+		</div>
+		<section class="hero">
+			<div class="heroOverlay"></div>
+			<h1>Contact Us</h1>
+		</section>
+		<main>
+			<div class="contactFormSectionContainer">
+				<div class="contactFormImageContainer">	
+					<div class="contactFormImage"></div>
+				</div>
+				<div class="contactForm">
+					<h2>Get in touch.</h2>
+					<p>Use the form below to drop us an email. Old fashion phone calls work too – <a class="formTextLink" href="tel:+18177315252">817.731.5252.</a></p>
+					<form>
+						<label for="name">Name :</label>
+						<input type="text" name="name" id="name">
+						<label for="email">Email :</label>
+						<input type="email" name="email" id="email">
+						<label for="message">Message :</label>
+						<textarea name="message" id="message"></textarea>
+						<button class="submitForm">Submit</button>
+					</form>
+				</div>
+			</div>
+			<section id="map"></section>
+		</main>
+		<footer class="footer">
+			<div class="footerColumn">
+				<img src="./Images/logowebp.webp">
+				<div class="footerSocialMedia">		
+					<a href="https://www.instagram.com/">
+						<svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11C3 7.22876 3 5.34315 4.17157 4.17157C5.34315 3 7.22876 3 11 3H13C16.7712 3 18.6569 3 19.8284 4.17157C21 5.34315 21 7.22876 21 11V13C21 16.7712 21 18.6569 19.8284 19.8284C18.6569 21 16.7712 21 13 21H11C7.22876 21 5.34315 21 4.17157 19.8284C3 18.6569 3 16.7712 3 13V11Z" stroke="white" stroke-width="2"/><circle cx="16.5" cy="7.5" r="1.5" fill="white"/><circle cx="12" cy="12" r="3" stroke="white" stroke-width="2"/></svg>
+					</a>
+					<a href="https://www.facebook.com/">
+						<svg viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-385.000000, -7399.000000)" fill="white"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"></path></g></g></g></svg>
+					</a>
+					<a href="https://x.com/">
+						<svg viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-60.000000, -7521.000000)" fill="white"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"></path></g></g></g></svg>
+					</a>
+				</div>
+			</div>
+			<div class="footerColumn">
+				<a class="footerLink" href="contact.html">Contact</a>
+				<a class="footerLink" href="services.html">Services</a>
+			</div>
+			<div class="footerColumn">
+				<p class="footerHeading"><b>Hours</b></p>
+				<p>Tues-Fri 9:00am-6:00pm</p>
+				<p>Sat 9:00am-3:00pm</p>
+				<p>Closed Sun & Mon</p>
+			</div>
+			<div class="footerColumn">
+				<p class="footerHeading"><b>Location</b></p>
+				<p>3529 Lovell Avenue</p>
+				<p>Saint Etienne</p>
+				<a class="footerLink" href="#">817.731.5252</a>
+			</div>
+			<div class="footerColumn">
+				<button class="footerCta">Book Now</button>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./servicesScript.js"></script>
+	</body>
+</html>
