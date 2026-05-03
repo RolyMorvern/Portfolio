@@ -1,0 +1,217 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway", serif;
+	background-color: rgb(254,254,255);
+	color: #201713;
+	overflow-x: hidden;
+}
+.desktopNavContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: 4;
+	width: 100vw;
+	left: 0;
+	top: 0;
+}
+.desktopNav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50vw;
+	padding: 30px 0;
+}
+.desktopNav a,
+.mobileNav a {
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1.25px;
+	transform: scaleY(0.9);
+	transform-origin: top;
+	display: inline-block;
+	font-size: 0.95rem;
+	text-decoration: none;
+	color: rgba(255,255,255,.7);
+	transition: 0.3s color;
+}
+.desktopNav a:hover,
+.mobileNav a:hover {
+	color: rgb(254,254,255);
+}
+.active {
+	color: rgb(254,254,255) !important;
+}
+.desktopNav img {
+	width: 29.5%;
+}
+input#menuIcon {
+    display: none;
+}
+.mobileMenuIcon {
+	display: none;
+	cursor: pointer;
+	width: 25px;
+	margin: 0 25px;
+	padding: 0 25px;
+}
+.mobileMenuIcon .interiorMobileMenu,
+.mobileMenuIcon .interiorMobileMenu::before,
+.mobileMenuIcon .interiorMobileMenu::after {
+    background: rgb(254,254,255);
+    content: '';
+    height: 2px;
+    position: absolute;
+    transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+    width: 25px;
+}
+.mobileMenuIcon .interiorMobileMenu::before {
+    top: -6px;
+}
+.mobileMenuIcon .interiorMobileMenu::after {
+    top: 6px;
+}
+#menuIcon:checked + .mobileMenuIcon .interiorMobileMenu {
+    background: transparent;
+}
+
+#menuIcon:checked + .mobileMenuIcon .interiorMobileMenu::before {
+    transform: rotate(45deg);
+}
+
+#menuIcon:checked + .mobileMenuIcon .interiorMobileMenu::after {
+    transform: rotate(-45deg);
+}
+
+#menuIcon:checked + .mobileMenuIcon .interiorMobileMenu::before,
+#menuIcon:checked + .mobileMenuIcon .interiorMobileMenu::after {
+    top: 0;
+    transition: top ease .2s, transform ease .2s .2s;
+}
+.mobileNav {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	background-color: rgba(0,0,0,.9);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+.mobileNav a {
+	font-size: 2rem;
+	list-style-type: none;
+	padding-bottom: 1.5rem;
+}
+#firstMenuSection {
+	transform: translateY(-20px);
+}
+.menuSectionImageHero {
+	height: 60vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("./Images/menuHeroImgDrinks.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.menuSectionImageHero::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 60vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.7);
+}
+#firstMenuSectionHeader {
+	padding-top: 50px;
+}
+.menuSectionImageHero h2 {
+	position: relative;
+	z-index: 3;
+	color: white;
+	font-weight: 100;
+	font-size: 4.5rem;
+}
+.menuContentContainer {
+	padding: 4% 10%;
+	display: flex;
+	gap: 25px;
+	color: rgba(0,0,0,0.5);
+}
+.menuContentColumn > h3 {
+	text-transform: uppercase;
+	fontsize: 1.1rem;
+	font-weight: 700;
+}
+.menuContentColumn > h3::before {
+	content: "• ";
+}
+.menuContentColumn > h3::after {
+	content: " •";
+}
+.menuItem {
+	display: flex;
+	gap: 15px;
+}
+.menuItem h4 {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.menuItem p {
+	font-weight: 300;
+}
+@media (max-width: 900px) {
+	.desktopNavContainer {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.desktopNav {
+		display: flex;
+		padding: 25px;
+		justify-content: center;
+		width: 100vw;
+	}
+	.desktopNav a {
+		display: none;
+	}
+	.desktopNav img {
+		width: 25%;
+		min-width: 150px;
+		padding-right: calc(7.5% + 50px);		
+	}
+	.mobileMenuIcon {
+		display: block;
+	}
+	.menuSectionImageHero {
+		height: 40vh;
+	}
+	.menuSectionImageHero::before {
+		height: 40vh;
+	}
+	#firstMenuSectionHeader {
+		padding-top: 8.73%;
+	}
+	.menuSectionImageHero h2 {
+		font-size: 3rem;
+	}
+	.menuContentContainer {
+		padding: 4% 50px !important;
+		flex-direction: column;
+	}
+	.menuItem {
+		align-items: center;
+		justify-content: space-between;
+	}
+}
