@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+	--bg: #fefaf4;
+	--text-header: #fefeff;
+	--header-bg: #f9320b;
+	--accent: #9DBF90;
+	--carousel-bg: #232223;
+	--footer: #232223;
+	--menu-text: #2e5f43;
+	--contact-accent: #6fbf4c;
+
+}
+h1, h2, h3, h4 {
+	font-family: Caprasimo, sans-serif;
+}
+.active {
+	color: var(--accent) !important;
+	border-bottom: 1px solid var(--accent);
+}
+body {
+	padding: 0;
+	margin: 0;
+	background-color: var(--bg);
+	font-family: "Noto Sans", sans-serif;
+}
+body::before {
+    content: '';
+    display: block;
+    height: calc(100px + 1px);
+}
+nav {
+	position: fixed;
+	top: 0;
+	background-color: var(--bg);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 50px;
+	width: calc(100vw - 100px);
+	z-index: 10;
+}
+.navImage {
+	width: 15%;
+	min-width: 50px;
+}
+.navItem {
+	width: 50%;
+}
+.navLinks {
+	display: flex;
+	justify-content: space-evenly;
+}
+.navLinks a {
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+	font-family: "Noto Sans", sans-serif;
+	transition: color 0.5s;
+	text-transform: uppercase;
+}
+.navLinks a:hover {
+	color: var(--accent);
+}
+.mobileMenuIcon {
+	width: 10%;
+	cursor: pointer;
+	display: none;
+}
+.mobileMenuIcon img {
+	width: 2rem;
+}
+header {
+	background: url("./assets/header.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-color: var(--header-bg);
+	color: var(--text-header);
+	padding: 50px 50% 50px 50px;
+}
+header h1 {
+	margin-top: 18%;
+	font-size: 4.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 4rem;
+	margin-bottom: 0;
+}
+header p {
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	font-family: Montserrat, sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+header button {
+	color: var(--text-header);
+	border: 2px solid var(--text-header);
+	background-color: transparent;
+	padding: 15px 30px;
+	font-size: 1.25rem;
+	font-family: Montserrat, sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-radius: 25px;
+	margin: 25px 0;
+	cursor: pointer;
+	transition: background-color 0.5s, color 0.5s;
+}
+header button:hover {
+	background-color: var(--text-header);
+	color: var(--accent);
+}
+.carousel {
+	overflow-x: auto;
+	display: flex;
+	gap: 3rem;
+	padding: 15px 0;
+	background-color: var(--carousel-bg);
+}
+.carousel::-webkit-scrollbar {
+	display: none !important;
+}
+.carousel .group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	animation: spin 120s infinite linear;
+}
+.carousel .group .card {
+	color: var(--text-header);
+	font-weight: 400;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-family: Caprasimo, sans-serif;
+	width: 12.5rem;
+}
+main {
+	margin: 50px;
+}
+#options {
+	display: flex;
+	gap: 25px;
+	text-align: center;
+}
+.optionCard {
+	width: 33.33%
+}
+.optionCardImg {
+	width: 100%;
+	aspect-ratio: 1/1;
+	border-radius: 35px;
+}
+#optionCardImg1 {
+	background: url("./assets/option1.png");
+	background-size: cover;
+	background-position: right; bottom;
+}
+#optionCardImg2 {
+	background: url("./assets/option2.png");
+	background-size: cover;
+	background-position: center bottom;
+}
+#optionCardImg3 {
+	background: url("./assets/option3.png");
+	background-size: cover;
+	background-position: center center;
+}
+#options h2 {
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+footer {
+	background-color: var(--footer);
+	color: var(--text-header);
+	padding: 50px;
+	display: flex;
+	gap: 25px;
+}
+.footerCol {
+	width: calc(100%/5);
+}
+.footerColTitle {
+	font-weight: 800;
+	margin-bottom: 3rem !important;
+}
+.footerCol p {
+	margin: 0;
+}
+.footerCol a {
+	color: var(--text-header);
+	transition: color 0.5s;
+}
+.footerCol a:hover {
+	color: var(--accent);
+}
+.footerCol img {
+	width: 75%;
+	float: right;
+	right: 0;
+}
+.footerCol:last-of-type {
+	text-align: right;
+}
+
+
+/* MENU */
+
+.menu {
+	padding: 25px 10%;
+	display: flex;
+	gap: 50px;
+	color: var(--menu-text);
+}
+.menuCol {
+	width: calc(50% - 50px);
+}
+.menu h2 {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+}
+.menu h3 {
+	font-family: Montserrat, sans-serif;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	margin: 0;
+}
+.menu p {
+	margin-top: 3px;
+	line-height: 1.1rem;
+	text-transform: uppercase;
+}
+.menuItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+	margin-bottom: 15px;
+}
+.menuPrice {
+	font-weight: 800;
+	font-size: 1.5rem;
+}
+
+/* CONTACT */
+
+#contactContent {
+	background-color: var(--footer);
+	color: var(--bg);
+	margin: 0;
+	padding: 75px 50px 25px 50px;
+}
+.contactHeader {
+	border-bottom: 2px solid var(--bg);
+	padding-bottom: 0;
+	margin-bottom: 
+}
+.contactMap {
+	width: 100%;
+	aspect-ratio: 1/0.35;
+	margin-top: 25px;
+}
+.contactCols {
+	display: flex;
+	gap: 25px;
+	margin-top: 25px;
+}
+.contactCol {
+	width: calc(100%/3);
+	font-size: 1.25rem;
+	font-family: Montserrat, sans-serif; 
+}
+.contactCol a {
+	color: var(--bg);	
+}
+.contactCol a:hover {
+	color: var(--contact-accent);
+}
+#carouselContact {
+	background: var(--contact-accent);
+}
+#carouselContact .card {
+	color: var(--footer) !important;
+}
+.contactImg {
+	margin: 50px;
+}
+.contactImgContainer {
+	width: 100%;
+	aspect-ratio: 1/0.35;
+	background: url("./assets/contactImg.webp");
+	background-size: cover;
+	background-position: center;
+}
+@media (max-width: 1000px) {
+	header h1 {
+		font-size: 3rem;
+	}
+}
+@media (max-width: 800px) {
+	header {
+		padding: 25px;
+	}
+	header h1 {
+		margin-top: 0; 
+		font-size: 2.5rem;
+	}
+	header p, header button {
+		font-size: 1rem;
+	}
+	.carousel .group .card {
+		font-size: 1.5rem;
+	}
+	#options {
+		flex-direction: column;
+	}
+	.optionCard {
+		width: 100%;
+	}
+	.optionCardImg {
+		aspect-ratio: 1/0.4;
+	}
+	#optionCardImg1 {
+		background-position: center 35%;
+	}
+	#optionCardImg2 {
+		background-position: center center;
+	}
+	#optionCardImg3 {
+		background-position: center 25%;
+	}
+	.footerCol {
+		width: 33.33% !important;
+	}
+	.footerCol:last-of-type, .footerCol:nth-of-type(4) {
+		display: none;
+	}
+	.menu {
+		flex-direction: column;
+		padding: 25px 0;	
+	}
+	.menuCol {
+		width: 100%;
+	}
+	.contactCols {
+		flex-direction: column;
+	}
+	.contactCol {
+		width: 100%;
+	}
+}
+@media (max-width: 500px) {
+	.navLinks {
+		position: absolute;
+		z-index: -5;
+		background: var(--bg);
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 25px;
+		padding: 0 50px;
+		display: none;
+	}
+	.navLinks a {
+		font-size: 2rem;
+	} 
+	.mobileMenuIcon {
+		display: block;
+	}
+	header {
+		background: var(--header-bg);
+	}
+	footer {
+		flex-wrap: wrap;
+	}
+	.footerCol {
+		padding-bottom: 25px;
+	}
+	.contactMap, .contactImgContainer {
+		aspect-ratio: 1/0.75;
+	}
+}
+@keyframes spin {
+	from {translate: 0;}
+	to {translate: -100%;}
+}
